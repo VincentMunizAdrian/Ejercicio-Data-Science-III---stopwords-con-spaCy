@@ -42,7 +42,7 @@ El conjunto de datos contiene reseñas realizadas por usuarios sobre productos c
 Dimensiones del dataset:
 
 ```text
-(20442, 9)
+(21214, 9)
 ```
 
 ---
@@ -129,10 +129,11 @@ Tras analizar las palabras más frecuentes obtenidas después de la limpieza est
 
 ```python
 custom_stopwords = {
-    "amazon",
     "product",
+    "amazon",
     "buy",
-    "bought"
+    "bought",
+    "service"
 }
 ```
 
@@ -142,8 +143,8 @@ Estas palabras aparecen frecuentemente en las reseñas debido al contexto espec�
 
 Por ejemplo:
 
-- **amazon** hace referencia a la plataforma.
 - **product** aparece en gran cantidad de reseñas.
+- **amazon** hace referencia a la plataforma.
 - **buy** y **bought** describen la acción de compra.
 
 La eliminación de estos términos permite resaltar conceptos más relevantes relacionados con la calidad, servicio y experiencia del cliente.
@@ -158,11 +159,11 @@ Las palabras más frecuentes correspondían principalmente a términos funcional
 
 | Palabra | Frecuencia |
 |----------|------------|
-| i | 3195 |
-| the | 2931 |
-| to | 2750 |
-| and | 2378 |
-| a | 1808 |
+| i | 3138 |
+| the | 2912 |
+| to | 2745 |
+| and | 2367 |
+| a | 1807 |
 
 ---
 
@@ -172,11 +173,11 @@ Comenzaron a destacarse términos relacionados con las reseñas:
 
 | Palabra | Frecuencia |
 |----------|------------|
-| amazon | 1218 |
-| customer | 533 |
-| service | 521 |
-| delivery | 405 |
-| order | 354 |
+| amazon | 1465 |
+| customer | 529 |
+| service | 513 |
+| delivery | 400 |
+| order | 351 |
 
 ---
 
@@ -186,13 +187,11 @@ La representación textual se volvió más específica y descriptiva:
 
 | Palabra | Frecuencia |
 |----------|------------|
-| amazon | 1218 |
-| customer | 533 |
-| service | 521 |
-| delivery | 405 |
-| order | 354 |
-
-> Reemplazar los valores XXXX por las frecuencias reales obtenidas durante la ejecución.
+| customer | 529 |
+| delivery | 400 |
+| order | 351 |
+| time | 293 |
+| item | 283 |
 
 ---
 
