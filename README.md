@@ -218,6 +218,38 @@ Los resultados obtenidos muestran que una adecuada estrategia de preprocesamient
 
 ---
 
+## Diversidad Léxica
+
+Para evaluar la riqueza del vocabulario presente en el corpus se calculó la **diversidad léxica**, definida como:
+
+\[
+\text{Diversidad Léxica} =
+\frac{\text{Número de palabras únicas}}
+{\text{Número total de palabras}}
+\]
+
+Esta métrica permite medir qué tan variado es el vocabulario utilizado en los textos. Valores más altos indican una mayor proporción de términos únicos respecto al total de palabras procesadas.
+
+### Resultados obtenidos
+
+| Etapa | Diversidad Léxica |
+|---------|---------:|
+| Texto original | 0.0696 |
+| Stopwords estándar | 0.1577 |
+| Stopwords personalizadas | 0.1687 |
+
+### Interpretación
+
+Los resultados muestran un incremento significativo de la diversidad léxica después de aplicar la limpieza del texto.
+
+- En el **texto original**, la diversidad léxica es menor debido a la alta frecuencia de palabras funcionales del idioma (artículos, pronombres, preposiciones, etc.).
+- Tras eliminar las **stopwords estándar**, la diversidad aumenta considerablemente, ya que desaparecen términos muy frecuentes que aportan poco contenido semántico.
+- Finalmente, al incorporar **stopwords personalizadas** específicas del dominio de Amazon, la diversidad léxica vuelve a incrementarse, permitiendo destacar palabras más representativas de las opiniones y experiencias de los usuarios.
+
+Estos resultados indican que la eliminación de stopwords mejora la calidad de la representación textual y facilita la identificación de términos relevantes para tareas posteriores de análisis de texto y procesamiento de lenguaje natural.
+
+---
+
 # Conclusiones
 
 - spaCy permite realizar tokenización y limpieza de texto de manera eficiente.
